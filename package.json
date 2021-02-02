@@ -1,0 +1,24 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "Pure Javascript Excel",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xursand7777/Javascript.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "excel"
+  ],
+  "author": "Xursand Xaitbaev <khursand.khaitbaev@mail.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xursand7777/Javascript/issues"
+  },
+  "homepage": "https://github.com/Xursand7777/Javascript#readme"
+}
