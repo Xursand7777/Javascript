@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/Xursand7777/Javascript/issues"
   },
-  "homepage": "https://github.com/Xursand7777/Javascript#readme"
+  "homepage": "https://github.com/Xursand7777/Javascript#readme",
+  "devDependencies": {
+    "webpack": "^5.19.0",
+    "webpack-cli": "^4.4.0"
+  }
 }
