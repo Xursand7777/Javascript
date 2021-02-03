@@ -1,13 +1,13 @@
 const path = require('path')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require("copy-webpack-plugin");
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require("copy-webpack-plugin")
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-const isProd = process.env.NODE_ENV === 'production'
-const isDev = !isProd
-console.log('IS PROD', isProd)
-console.log('IS DEV', isDev)
+
+
+
+
 
 module.exports={
     context: path.resolve(__dirname,'src'),
@@ -27,7 +27,8 @@ module.exports={
     plugins:[
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template:'index.html'
+            template:'index.html',
+           
         }),
         new CopyPlugin({
             patterns: [
@@ -36,9 +37,21 @@ module.exports={
               
             ],
           }),
-          new iniCssExtractPlugin({
+          new MiniCssExtractPlugin({
               filename:'bundle.[hash].css'
           })
 
-    ]
+    ],
+    module:{
+        rules: [
+            {
+              test: /\.s[ac]ss$/i,
+              use: [
+                MiniCssExtractPlugin.loader,
+                "css-loader",
+                "sass-loader",
+              ],
+            },
+          ],
+    }
     }
