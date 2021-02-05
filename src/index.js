@@ -1,5 +1,4 @@
-import './module'
 import './scss/index.scss'
-
-
-console.log('Working')
+import '@babel/polyfill'
+import "regenerator-runtime/runtime";
+console.log('Working!')
